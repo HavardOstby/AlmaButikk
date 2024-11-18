@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High-End Web Shop - Children's Clothing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Same styles as the previous version */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>High-End Children's Clothing</h1>
+    <div class="header-controls">
+      <div>
+        <input type="text" id="search" placeholder="Search products..." />
+        <select id="filter">
+          <option value="">All Categories</option>
+        </select>
+      </div>
+      <div class="cart-icon" onclick="toggleCartView()">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+  <div id="overlay" onclick="toggleCartView()"></div>
+  <div class="container">
+    <div id="products" class="grid"></div>
+    <div id="product-detail" style="display: none;"></div>
+    <div id="cart-view">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="total">Total: $<span id="cart-total">0</span></div>
+      <button onclick="toggleCartView()">Close</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
